@@ -1,0 +1,12 @@
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\bin\Debug\netcoreapp2.1\BlogSite.Service.deps.json
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\bin\Debug\netcoreapp2.1\BlogSite.Service.dll
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\bin\Debug\netcoreapp2.1\BlogSite.Service.pdb
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\bin\Debug\netcoreapp2.1\BlogSite.Data.dll
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\bin\Debug\netcoreapp2.1\BlogSite.Data.pdb
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\obj\Debug\netcoreapp2.1\BlogSite.Service.csprojAssemblyReference.cache
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\obj\Debug\netcoreapp2.1\BlogSite.Service.csproj.CoreCompileInputs.cache
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\obj\Debug\netcoreapp2.1\BlogSite.Service.AssemblyInfoInputs.cache
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\obj\Debug\netcoreapp2.1\BlogSite.Service.AssemblyInfo.cs
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\obj\Debug\netcoreapp2.1\BlogSite.Service.csproj.CopyComplete
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\obj\Debug\netcoreapp2.1\BlogSite.Service.dll
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Service\obj\Debug\netcoreapp2.1\BlogSite.Service.pdb

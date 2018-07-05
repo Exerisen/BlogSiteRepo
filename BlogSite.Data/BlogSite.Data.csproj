@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Domain\tblArticle.cs" />
+    <Content Include="Domain\tblArticleImage.cs" />
+    <Content Include="Domain\tblArticleTag.cs" />
+    <Content Include="Domain\tblCategory.cs" />
+    <Content Include="Domain\tblAuthor.cs" />
+    <Content Include="Domain\tblComment.cs" />
+    <Content Include="Domain\tblMedia.cs" />
+    <Content Include="Domain\tblTag.cs" />
+    <Content Include="Domain\tblVisitor.cs" />
+    <Content Include="BaseEntity.cs" />
+    <Content Include="BlogContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+</Project>

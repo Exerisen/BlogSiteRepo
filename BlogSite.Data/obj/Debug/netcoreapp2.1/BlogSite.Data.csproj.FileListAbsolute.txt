@@ -1,0 +1,11 @@
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\bin\Debug\netcoreapp2.1\BlogSite.Data.deps.json
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\bin\Debug\netcoreapp2.1\BlogSite.Data.runtimeconfig.json
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\bin\Debug\netcoreapp2.1\BlogSite.Data.runtimeconfig.dev.json
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\bin\Debug\netcoreapp2.1\BlogSite.Data.dll
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\bin\Debug\netcoreapp2.1\BlogSite.Data.pdb
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\obj\Debug\netcoreapp2.1\BlogSite.Data.csprojAssemblyReference.cache
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\obj\Debug\netcoreapp2.1\BlogSite.Data.csproj.CoreCompileInputs.cache
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\obj\Debug\netcoreapp2.1\BlogSite.Data.AssemblyInfoInputs.cache
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\obj\Debug\netcoreapp2.1\BlogSite.Data.AssemblyInfo.cs
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\obj\Debug\netcoreapp2.1\BlogSite.Data.dll
+C:\Users\FATIH\Desktop\BlogSite\BlogSite.Data\obj\Debug\netcoreapp2.1\BlogSite.Data.pdb

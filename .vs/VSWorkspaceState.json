@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BlogSite.Data",
+    "\\BlogSite.Web",
+    "\\BlogSite.Web\\Controllers",
+    "\\BlogSite.Web\\Views",
+    "\\BlogSite.Web\\Views\\Home"
+  ],
+  "SelectedNode": "\\BlogSite.Web\\appsettings.json",
+  "PreviewInSolutionExplorer": false
+}
