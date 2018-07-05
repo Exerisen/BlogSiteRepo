@@ -6,7 +6,9 @@ namespace  BlogSite.Data
     {
         public BlogContext(DbContextOptions<BlogContext> options ):base(options)
         {
-            //MODELDE DE–›ﬁ›KL›K OLURSA DATABASE› G‹NCELLEYEN KODU BUL.
+            //MODELDE DE√ê√ù√û√ùKL√ùK OLURSA DATABASE√ù G√úNCELLEYEN KODU BUL.
+                       // Database.SetInitializer<BlogContext>(new DropCreateDatabaseIfModelChanges<BlogContext>());
+
         }
   
         
