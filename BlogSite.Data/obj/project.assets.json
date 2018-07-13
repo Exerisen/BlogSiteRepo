@@ -3520,11 +3520,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Data\\BlogSite.Data.csproj",
+      "projectUniqueName": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Data\\BlogSite.Data.csproj",
       "projectName": "BlogSite.Data",
-      "projectPath": "c:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Data\\BlogSite.Data.csproj",
+      "projectPath": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Data\\BlogSite.Data.csproj",
       "packagesPath": "C:\\Users\\FATIH\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Data\\obj\\",
+      "outputPath": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

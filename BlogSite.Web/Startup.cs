@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-
+using BlogSite.Service.Articles;
+using BlogSite.Service.Categories;
 
 namespace BlogSite
 {
@@ -31,7 +32,7 @@ namespace BlogSite
 
 
             //  services.AddDbContext<BlogContext>(options=>options.UseSqlServer(connection,b=>b.MigrationsAssembly("BlogSite")));
-            services.AddDbContext<BlogContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<BlogContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),b=>b.MigrationsAssembly("BlogSite")));
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -41,7 +42,8 @@ namespace BlogSite
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-           
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IArticleRepository, ArticleRepository>();
 
         }
 

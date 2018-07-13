@@ -4,23 +4,20 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Domain\tblArticle.cs" />
-    <Content Include="Domain\tblArticleImage.cs" />
-    <Content Include="Domain\tblArticleTag.cs" />
-    <Content Include="Domain\tblCategory.cs" />
-    <Content Include="Domain\tblAuthor.cs" />
-    <Content Include="Domain\tblComment.cs" />
-    <Content Include="Domain\tblMedia.cs" />
-    <Content Include="Domain\tblTag.cs" />
-    <Content Include="Domain\tblVisitor.cs" />
+    <Content Include="Domain\Article.cs" />
+    <Content Include="Domain\ArticleMedia.cs" />
+    <Content Include="Domain\ArticleTag.cs" />
+    <Content Include="Domain\Category.cs" />
+    <Content Include="Domain\Author.cs" />
+    <Content Include="Domain\Comment.cs" />
+    <Content Include="Domain\Media.cs" />
+    <Content Include="Domain\Tag.cs" />
+    <Content Include="Domain\Visitor.cs" />
     <Content Include="BaseEntity.cs" />
     <Content Include="BlogContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>

@@ -21,10 +21,12 @@ namespace BlogSite.Controllers
     
 
         public IActionResult Index()
-        { 
+        {
+
+        //    
 
             //Partial kategorinin burdan gitmemesi lazım düzeltilecek.  
-            return View(_genericUnitofWork.Repository<tblCategory>().GetAll()); 
+            return View(_genericUnitofWork.Repository<Category>().GetAll()); 
         }
 
      

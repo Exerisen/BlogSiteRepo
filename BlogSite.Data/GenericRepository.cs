@@ -17,16 +17,22 @@ namespace BlogSite.Data
         }   
 
 
-        public virtual IList<Tentity> GetAll()
+        public virtual IEnumerable<Tentity> GetAll()
         {
             return _context.Set<Tentity>().ToList();
            
             
         }
 
-        public virtual IList<Tentity> Where(Expression<Func<Tentity, bool>> predicate)
+        public virtual IEnumerable<Tentity> Where(Expression<Func<Tentity, bool>> predicate)
         {
             var result = _context.Set<Tentity>().Where(predicate);
+            return result.ToList();
+        }
+
+        public IEnumerable<Tentity> OrderByDescending(Expression<Func<Tentity, int>> predicate)
+        {
+          var result = _context.Set<Tentity>().OrderByDescending(predicate);
             return result.ToList();
         }
         public Tentity Create(Tentity entity)
@@ -52,8 +58,14 @@ namespace BlogSite.Data
             return _context.SaveChanges();
            
         }
+
      
 
-      
+        public Tentity GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+     
     }
 }

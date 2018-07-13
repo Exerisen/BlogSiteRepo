@@ -4629,6 +4629,19 @@
         "runtime": {
           "bin/placeholder/BlogSite.Data.dll": {}
         }
+      },
+      "BlogSite.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "BlogSite.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogSite.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogSite.Service.dll": {}
+        }
       }
     }
   },
@@ -12227,11 +12240,17 @@
       "type": "project",
       "path": "../BlogSite.Data/BlogSite.Data.csproj",
       "msbuildProject": "../BlogSite.Data/BlogSite.Data.csproj"
+    },
+    "BlogSite.Service/1.0.0": {
+      "type": "project",
+      "path": "../BlogSite.Service/BlogSite.Service.csproj",
+      "msbuildProject": "../BlogSite.Service/BlogSite.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "BlogSite.Data >= 1.0.0",
+      "BlogSite.Service >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 2.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.1",
@@ -12246,11 +12265,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Web\\BlogSite.csproj",
+      "projectUniqueName": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Web\\BlogSite.csproj",
       "projectName": "BlogSite",
-      "projectPath": "C:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Web\\BlogSite.csproj",
+      "projectPath": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Web\\BlogSite.csproj",
       "packagesPath": "C:\\Users\\FATIH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Web\\obj\\",
+      "outputPath": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12268,8 +12287,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Data\\BlogSite.Data.csproj": {
-              "projectPath": "C:\\Users\\FATIH\\Desktop\\BlogSite\\BlogSite.Data\\BlogSite.Data.csproj"
+            "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Data\\BlogSite.Data.csproj": {
+              "projectPath": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Data\\BlogSite.Data.csproj"
+            },
+            "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Service\\BlogSite.Service.csproj": {
+              "projectPath": "C:\\Users\\FATIH\\Desktop\\BlogSiteRepo\\BlogSite.Service\\BlogSite.Service.csproj"
             }
           }
         }

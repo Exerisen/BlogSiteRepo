@@ -19,23 +19,23 @@ namespace BlogSite.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BlogSite.Data.tblArticle", b =>
+            modelBuilder.Entity("BlogSite.Data.Article", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryID");
-
                     b.Property<string>("ArticleContent");
 
-                    b.Property<int>("CoverImageID");
+                    b.Property<Guid>("AuthorID");
+
+                    b.Property<int>("CategoryID");
 
                     b.Property<int>("Likes");
 
-                    b.Property<DateTime>("PublishDate");
+                    b.Property<int>("MediaID");
 
-                    b.Property<Guid>("PublisherID");
+                    b.Property<DateTime>("PublishDate");
 
                     b.Property<string>("Summary");
 
@@ -47,55 +47,53 @@ namespace BlogSite.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("tblArticle");
+                    b.HasIndex("AuthorID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.HasIndex("MediaID");
+
+                    b.ToTable("Article");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblArticleImage", b =>
+            modelBuilder.Entity("BlogSite.Data.ArticleMedia", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<int>("ArticleID");
 
-                    b.Property<int>("ImageID");
+                    b.Property<int>("MediaID");
 
-                    b.HasKey("ID");
+                    b.Property<int>("ID");
 
-                    b.HasIndex("ArticleID");
+                    b.HasKey("ArticleID", "MediaID");
 
-                    b.HasIndex("ImageID");
+                    b.HasIndex("MediaID");
 
-                    b.ToTable("tblArticleImage");
+                    b.ToTable("ArticleMedias");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblArticleTag", b =>
+            modelBuilder.Entity("BlogSite.Data.ArticleTag", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<int>("ArticleID");
 
                     b.Property<int>("TagID");
 
-                    b.HasKey("ID");
+                    b.Property<int>("ID");
 
-                    b.HasIndex("ArticleID");
+                    b.HasKey("ArticleID", "TagID");
 
                     b.HasIndex("TagID");
 
-                    b.ToTable("tblArticleTag");
+                    b.ToTable("ArticleTags");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblAuthor", b =>
+            modelBuilder.Entity("BlogSite.Data.Author", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("ImageID");
-
                     b.Property<string>("MailAdress");
+
+                    b.Property<int>("MediaID");
 
                     b.Property<string>("Name");
 
@@ -107,16 +105,14 @@ namespace BlogSite.Migrations
 
                     b.Property<bool>("isActive");
 
-                    b.Property<int?>("tblMediaID");
-
                     b.HasKey("ID");
 
-                    b.HasIndex("tblMediaID");
+                    b.HasIndex("MediaID");
 
-                    b.ToTable("tblAuthor");
+                    b.ToTable("Author");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblCategory", b =>
+            modelBuilder.Entity("BlogSite.Data.Category", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -126,10 +122,10 @@ namespace BlogSite.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("tblCategory");
+                    b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblComment", b =>
+            modelBuilder.Entity("BlogSite.Data.Comment", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -139,22 +135,22 @@ namespace BlogSite.Migrations
 
                     b.Property<string>("CommentContent");
 
+                    b.Property<string>("Nickname");
+
                     b.Property<DateTime>("SubmitDate");
 
                     b.Property<string>("Title");
 
                     b.Property<bool>("isActive");
 
-                    b.Property<int?>("tblArticleID");
-
                     b.HasKey("ID");
 
-                    b.HasIndex("tblArticleID");
+                    b.HasIndex("ArticleID");
 
-                    b.ToTable("tblComment");
+                    b.ToTable("Comment");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblMedia", b =>
+            modelBuilder.Entity("BlogSite.Data.Media", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -168,16 +164,17 @@ namespace BlogSite.Migrations
 
                     b.Property<string>("SmallPath");
 
-                    b.Property<DateTime>("UploadDate");
+                    b.Property<DateTime>("UploadDate")
+                        .ValueGeneratedOnAddOrUpdate();
 
                     b.Property<string>("VideoPath");
 
                     b.HasKey("ID");
 
-                    b.ToTable("tblMedia");
+                    b.ToTable("Media");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblTag", b =>
+            modelBuilder.Entity("BlogSite.Data.Tag", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -187,10 +184,10 @@ namespace BlogSite.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("tblTag");
+                    b.ToTable("Tag");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblVisitor", b =>
+            modelBuilder.Entity("BlogSite.Data.Visitor", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -202,47 +199,68 @@ namespace BlogSite.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("tblVisitor");
+                    b.ToTable("Visitor");
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblArticleImage", b =>
+            modelBuilder.Entity("BlogSite.Data.Article", b =>
                 {
-                    b.HasOne("BlogSite.Data.tblArticle", "Article")
-                        .WithMany("tblArticleImage")
+                    b.HasOne("BlogSite.Data.Author", "Author")
+                        .WithMany("Articles")
+                        .HasForeignKey("AuthorID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BlogSite.Data.Category", "Category")
+                        .WithMany("Articles")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BlogSite.Data.Media", "Media")
+                        .WithMany("Articles")
+                        .HasForeignKey("MediaID")
+                        .HasConstraintName("FK_Article_Media_MediaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("BlogSite.Data.ArticleMedia", b =>
+                {
+                    b.HasOne("BlogSite.Data.Article", "Article")
+                        .WithMany("ArticleMedias")
                         .HasForeignKey("ArticleID")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("BlogSite.Data.tblMedia", "Image")
-                        .WithMany()
-                        .HasForeignKey("ImageID")
+                    b.HasOne("BlogSite.Data.Media", "Media")
+                        .WithMany("ArticleMedias")
+                        .HasForeignKey("MediaID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblArticleTag", b =>
+            modelBuilder.Entity("BlogSite.Data.ArticleTag", b =>
                 {
-                    b.HasOne("BlogSite.Data.tblArticle", "Article")
-                        .WithMany("tblArticleTag")
+                    b.HasOne("BlogSite.Data.Article", "Article")
+                        .WithMany("ArticleTags")
                         .HasForeignKey("ArticleID")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("BlogSite.Data.tblTag", "Tag")
-                        .WithMany()
+                    b.HasOne("BlogSite.Data.Tag", "Tag")
+                        .WithMany("ArticleTags")
                         .HasForeignKey("TagID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblAuthor", b =>
+            modelBuilder.Entity("BlogSite.Data.Author", b =>
                 {
-                    b.HasOne("BlogSite.Data.tblMedia", "tblMedia")
+                    b.HasOne("BlogSite.Data.Media", "Media")
                         .WithMany()
-                        .HasForeignKey("tblMediaID");
+                        .HasForeignKey("MediaID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("BlogSite.Data.tblComment", b =>
+            modelBuilder.Entity("BlogSite.Data.Comment", b =>
                 {
-                    b.HasOne("BlogSite.Data.tblArticle", "tblArticle")
-                        .WithMany()
-                        .HasForeignKey("tblArticleID");
+                    b.HasOne("BlogSite.Data.Article", "Article")
+                        .WithMany("Comments")
+                        .HasForeignKey("ArticleID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

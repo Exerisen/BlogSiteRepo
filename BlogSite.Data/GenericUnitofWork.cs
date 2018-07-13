@@ -16,6 +16,8 @@ namespace BlogSite.Data
         }
 
         private Dictionary<Type, object> repositories = new Dictionary<Type, object>();
+
+
         public IGenericRepository<TEntity> Repository<TEntity>() where TEntity:class
         {
             if(repositories.Keys.Contains(typeof(TEntity))==true)

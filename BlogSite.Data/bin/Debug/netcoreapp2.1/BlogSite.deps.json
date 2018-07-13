@@ -25,6 +25,7 @@
       "BlogSite/1.0.0": {
         "dependencies": {
           "BlogSite.Data": "1.0.0",
+          "BlogSite.Service": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.EntityFrameworkCore.Design": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
@@ -525,6 +526,17 @@
         },
         "compile": {
           "BlogSite.Data.dll": {}
+        }
+      },
+      "BlogSite.Service/1.0.0": {
+        "dependencies": {
+          "BlogSite.Data": "1.0.0"
+        },
+        "runtime": {
+          "BlogSite.Service.dll": {}
+        },
+        "compile": {
+          "BlogSite.Service.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3654,6 +3666,11 @@
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
     },
     "BlogSite.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogSite.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

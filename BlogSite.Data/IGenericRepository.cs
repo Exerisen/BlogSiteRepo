@@ -6,9 +6,14 @@ namespace BlogSite.Data
 {
     public interface IGenericRepository<TEntity> where TEntity:class
     {
-        IList<TEntity> GetAll();
+        IEnumerable<TEntity> GetAll();
 
-        IList<TEntity> Where(Expression<Func<TEntity,bool>> predicate);
+        IEnumerable<TEntity> Where(Expression<Func<TEntity,bool>> predicate);
+
+
+        IEnumerable<TEntity> OrderByDescending(Expression<Func<TEntity, int>> predicate);
+
+        TEntity GetById(int id);
 
         TEntity Create(TEntity entity);
 

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BlogSite.Data.Article>
+@{
+    Layout = null;
+
+}
+<!--Most POPULER makaleler BEGIN-->
+<div class="col-lg-4">
+    <div class="sidebars-area">
+        <div class="single-sidebar-widget most-popular-widget">
+            <h6 class="title">Popüler Makaleler</h6>
+
+            @foreach (var article in Model)
+            {
+                <div class="single-sidebar-widget most-popular-widget">
+
+
+                    <div class="single-list flex-row d-flex">
+                        <div class="thumb">
+                            <a href="/Article/Detail/@article.ID">
+                  
+                                <img src="@article.Category.Name" alt="" /> <!--KATEGORİ GELİYOR FAKAT MEDİA NULL GELİYO.-->
+                            </a>
+                        </div>
+                        <div class="details">
+                            <a href="/Article/Detail/@article.ID">
+                                <h6>
+                                    @article.Title
+                                </h6>
+                            </a>
+                            <p class="excert">
+                                @article.Summary
+                            </p>
+                            <ul class="meta">
+                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>@article.PublishDate<a></li>
+                                <li><a href="#"><span class="lnr lnr-eye"></span>@article.Views</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+
+            <!--Most POPULER makaleler END-->
