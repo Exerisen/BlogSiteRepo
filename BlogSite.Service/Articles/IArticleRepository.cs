@@ -11,7 +11,7 @@ namespace BlogSite.Service.Articles
 
 
 
-         IEnumerable<Article> GetPopularArticleList();
+         IEnumerable<ArticleMedia> GetPopularArticleList();
 
                 
     }

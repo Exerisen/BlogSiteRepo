@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BlogSite.Data.Article>
+﻿@model IEnumerable<BlogSite.Data.ArticleMedia>
 @{
     Layout = null;
 
@@ -18,21 +18,21 @@
                         <div class="thumb">
                             <a href="/Article/Detail/@article.ID">
                   
-                                <img src="@article.Category.Name" alt="" /> <!--KATEGORİ GELİYOR FAKAT MEDİA NULL GELİYO.-->
+                                <img src="@article.Media.SmallPath" alt="" /> <!--KATEGORİ GELİYOR FAKAT MEDİA NULL GELİYO.-->
                             </a>
                         </div>
                         <div class="details">
                             <a href="/Article/Detail/@article.ID">
                                 <h6>
-                                    @article.Title
+                                    @article.Article.Title
                                 </h6>
                             </a>
                             <p class="excert">
-                                @article.Summary
+                                @article.Article.Summary
                             </p>
                             <ul class="meta">
-                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>@article.PublishDate<a></li>
-                                <li><a href="#"><span class="lnr lnr-eye"></span>@article.Views</a></li>
+                                <li><a href="#"><span class="lnr lnr-calendar-full"></span>@article.Article.PublishDate<a></li>
+                                <li><a href="#"><span class="lnr lnr-eye"></span>@article.Article.Views</a></li>
                             </ul>
                         </div>
                     </div>

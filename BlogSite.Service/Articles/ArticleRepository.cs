@@ -17,11 +17,11 @@ namespace BlogSite.Service.Articles
         }
 
 
-        public IEnumerable<Article> GetPopularArticleList()
+        public IEnumerable<ArticleMedia> GetPopularArticleList()
         {
           
          
-            return (uof.Repository<Article>().OrderByDescending(x => x.Views).Take(5).ToList());
+            return (uof.Repository<ArticleMedia>().OrderByDescending(x => x.Article.Views).Take(5).ToList());
             
         }
     }
